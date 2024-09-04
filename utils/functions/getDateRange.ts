@@ -1,4 +1,4 @@
-import { DateRange } from "@/app/interfaces/IdateRange";
+import { DateRange } from "@/interfaces/IdateRange";
 import {
   startOfDay,
   startOfWeek,

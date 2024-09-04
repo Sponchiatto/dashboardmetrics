@@ -17,3 +17,10 @@ export interface BarChartProps {
   };
   options?: ChartOptions<"bar">;
 }
+export interface LineChartProps {
+  data: {
+    labels: string[];
+    datasets: Dataset[];
+  };
+  options?: ChartOptions<"line">;
+}
