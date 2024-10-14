@@ -3,11 +3,6 @@ import "./globals.css";
 import Header from "@/components/Header/header";
 import Footer from "@/components/Footer/footer";
 
-export const metadata = {
-  title: "My Application",
-  description: "This is a description of my application",
-};
-
 export default function RootLayout({
   children,
 }: {

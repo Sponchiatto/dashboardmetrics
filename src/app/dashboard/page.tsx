@@ -7,9 +7,9 @@ import eodApple from "@/data/eod/eodApple.json";
 import eodGoogle from "@/data/eod/eodGoogle.json";
 import MultiBarChart from "@/components/BarChart/BarChart";
 import TitleH1 from "@/components/Title/title";
-import KpiCard from "@/components/KpiCard/KpiCard";
-import { PieChart } from "recharts";
-import Companies from "@/components/Companies/Companies";
+import CompanySelector from "@/components/CompanySelector/CompanySelector";
+import tickersData from "@/data/tickers.json";
+import { Ticker } from "@/interfaces/Company";
 
 export default function DashBoard() {
   return (
@@ -19,7 +19,7 @@ export default function DashBoard() {
           title="Painel de Análise de Ações para Empresas de Tecnologia"
           className="text-4xl font-bold text-gray-800 mb-6 text-center"
         />
-        <Companies/>
+        <CompanySelector tickers={tickersData.data as Ticker[]} />
         <div className="bg-white p-4 rounded-lg shadow-md">
           <MultiLineChart
             datasets={[
@@ -44,7 +44,6 @@ export default function DashBoard() {
             chartTitle="Volume de ações de algumas empresas de tecnologia"
           />
         </div>
-        
       </div>
     </div>
   );
